@@ -18,6 +18,11 @@ public class MilesToKilometerServer {
 
                 String response = "Miles to kilometers result: " + kilometers;
                 byte[] data = response.getBytes(StandardCharsets.UTF_8);
+
+                // Add CORS headers
+                exchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+                exchange.getResponseHeaders().add("Access-Control-Allow-Methods", "GET, OPTIONS");
+
                 exchange.sendResponseHeaders(200, data.length);
                 try (OutputStream os = exchange.getResponseBody()) {
                     os.write(data);

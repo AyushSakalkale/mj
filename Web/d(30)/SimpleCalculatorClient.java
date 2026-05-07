@@ -44,3 +44,9 @@ public class SimpleCalculatorClient {
  * http://localhost:7001/calculator?a=10&b=5&operation=add
  * 7. Service runs on port 7001 and returns the calculator result.
  */
+
+// sudo apt update
+// sudo apt install openjdk-21-jdk -y
+// sudo apt install default-jdk -y
+
+// sudo apt remove default-jdk
